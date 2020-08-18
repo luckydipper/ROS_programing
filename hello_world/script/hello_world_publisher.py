@@ -1,4 +1,4 @@
-#!/user/bine/env python
+#!/usr/bin/env python
 import rospy
 from std_msgs.msg import String
 
@@ -12,6 +12,7 @@ def talker():
         rospy.loginfo(str)
         pub.publish(str)
         r.sleep()
+
 
 if __name__ == "__main__":
     try:
