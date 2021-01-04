@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 #최소버전
-project(ros_tutorial_topic)
+project(ros_tutorials_topic)
 #프로젝트 이름
 
 ## Compile as C++11, supported in ROS Kinetic and newer
@@ -142,13 +142,13 @@ add_executable(topic_publisher src/topic_publisher.cpp)
 add_dependencies(topic_publisher ${${PROJECT_NAME}_EXPORTED_TARGETS}
 ${catkin_EXPORTED_TARGETS})
 #만들기 전에 메세지 파일부터 필드해라
-target_link_libraries(topic_publisher${catkin_LIBRARIES})
+target_link_libraries(topic_publisher ${catkin_LIBRARIES})
 
 ## topic_subscriber 노드에 빌드 옵션 추가
 add_executable(topic_subscriber src/topic_subscriber.cpp)
 add_dependencies(topic_subscriber ${${PROJECT_NAME}_EXPORTED_TARGETS}
 ${catkin_EXPORTED_TARGETS})
-target_link_libraries(topic_subscriber${catkin_LIBRARIES})
+target_link_libraries(topic_subscriber ${catkin_LIBRARIES})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
